@@ -6,7 +6,24 @@ librerias de pandas para resolver las preguntas.
 """
 
 
+import pandas as pd
+
 def pregunta_05():
+    df = pd.read_csv(
+        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
+        sep='\t'
+    )
+    
+    promedio = df.groupby("c1")["c2"].max()
+
+    promedio = promedio.sort_index()
+
+    return promedio
+
+if __name__ == '__main__':
+    print("Rta/")
+    print(pregunta_05())
+
     """
     Calcule el valor máximo de `c2` por cada letra en la columna `c1` del
     archivo `tbl0.tsv`.

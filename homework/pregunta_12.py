@@ -4,9 +4,28 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 `tbl2.tsv`. En este laboratorio solo puede utilizar las funciones y 
 librerias de pandas para resolver las preguntas.
 """
-
+import pandas as pd
 
 def pregunta_12():
+    df = pd.read_csv(
+        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl2.tsv',
+        sep='\t'
+    )
+
+    df["c5"] = df["c5a"] + ":" + df["c5b"].astype(str)
+
+    resultado = (
+        df.sort_values(["c0", "c5a"])                
+          .groupby("c0")["c5"]                       
+          .apply(lambda x: ",".join(x))             
+          .reset_index()                          
+    )
+
+    return resultado
+
+if __name__ == '__main__':
+    print("Rta/")
+    print(pregunta_12())
     """
     Construya una tabla que contenga `c0` y una lista separada por ','
     de los valores de la columna `c5a`  y `c5b` (unidos por ':') de la

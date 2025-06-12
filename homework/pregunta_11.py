@@ -5,8 +5,24 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
+import pandas as pd
 
 def pregunta_11():
+    
+    df = pd.read_csv(
+        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl1.tsv',
+        sep='\t'
+    )
+
+    resultado = df.groupby("c0")["c4"] \
+        .apply(lambda x: ",".join(map(str, sorted(x)))) \
+        .reset_index()
+
+    return resultado
+
+if __name__ == '__main__':
+    print("Rta/")
+    print(pregunta_11())
     """
     Construya una tabla que contenga `c0` y una lista separada por ',' de
     los valores de la columna `c4` del archivo `tbl1.tsv`.

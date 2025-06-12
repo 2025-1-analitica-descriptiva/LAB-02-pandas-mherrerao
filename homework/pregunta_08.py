@@ -5,8 +5,23 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
+import pandas as pd
 
 def pregunta_08():
+    
+    df = pd.read_csv(
+        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
+        sep='\t'
+    )
+    
+    df["suma"] = df["c0"] + df["c2"]
+
+    return df
+
+if __name__ == '__main__':
+    print("Rta/")
+    print(pregunta_08())
+
     """
     Agregue una columna llamada `suma` con la suma de `c0` y `c2` al
     data frame que contiene el archivo `tbl0.tsv`.
