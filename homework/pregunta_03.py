@@ -8,20 +8,13 @@ import pandas as pd
 
 def pregunta_03():
 
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t',
-        thousands=None,
-        decimal='.'
-    )
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
 
-    conteo = df["c1"].value_counts().sort_index()
-    conteo.name = "count"
-    conteo.index.name = "c1"
-    return conteo 
-
-
+    count = df.groupby('c1').size()
+    return count
 print(pregunta_03())
+
+
 
     #"""
     #¿Cuál es la cantidad de registros por cada letra de la columna `c1` del

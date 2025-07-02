@@ -10,17 +10,13 @@ import pandas as pd
 
 def pregunta_10():
     
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t'
-    )
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
 
-    resultado = df.groupby("c1")["c2"] \
-        .apply(lambda x: ":".join(map(str, sorted(x)))) \
-        .to_frame() 
 
-    return resultado
-
+    result = df.groupby('c1')['c2'].apply(lambda x: ':'.join(sorted(x.astype(str)))).reset_index()
+    result.columns = ['_c1', 'c2']
+    result.set_index('_c1', inplace=True)
+    return result
 
 print(pregunta_10())
 

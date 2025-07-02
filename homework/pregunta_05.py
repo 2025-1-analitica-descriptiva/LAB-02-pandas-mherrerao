@@ -9,17 +9,12 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_05():
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t'
-    )
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+
     
     promedio = df.groupby("c1")["c2"].max()
 
-    promedio = promedio.sort_index()
-
     return promedio
-
 
 print(pregunta_05())
 

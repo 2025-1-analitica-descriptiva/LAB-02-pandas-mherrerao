@@ -9,26 +9,16 @@ import pandas as pd
 
 def pregunta_13():
    
-    df0 = df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t',
-        thousands=None,
-        decimal='.'
-    )
-    df2 = df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl2.tsv',
-        sep='\t',
-        thousands=None,
-        decimal='.'
-    )
+    df0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+    df1 = pd.read_csv('files/input/tbl2.tsv', sep='\t')
 
 
-    df_merge = pd.merge(df0, df2, on="c0")
+    df_merge = pd.merge(df0, df1, on="c0")
 
 
-    resultado = df_merge.groupby("c1")["c5b"].sum()
+    result = df_merge.groupby("c1")["c5b"].sum()
 
-    return resultado
+    return result
 
 
 print(pregunta_13())

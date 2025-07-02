@@ -7,15 +7,9 @@ librerias de pandas para resolver las preguntas.
 import pandas as pd
 
 def pregunta_09():
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t'
-    )
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
 
-    df["c3"] = pd.to_datetime(df["c3"], errors='coerce')
-
-    df["year"] = df["c3"].dt.year.astype("Int64").astype(str)
-
+    df['year'] = df['c3'].str[:4]
     return df
 
 print(pregunta_09())

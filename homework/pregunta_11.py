@@ -9,17 +9,11 @@ import pandas as pd
 
 def pregunta_11():
     
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl1.tsv',
-        sep='\t'
-    )
+    df = pd.read_csv('files/input/tbl1.tsv', sep='\t')
 
-    resultado = df.groupby("c0")["c4"] \
-        .apply(lambda x: ",".join(map(str, sorted(x)))) \
-        .reset_index()
-
-    return resultado
-
+    result = df.groupby('c0')['c4'].apply(lambda x: ','.join(sorted(x.astype(str)))).reset_index()
+    result.columns = ['c0', 'c4']
+    return result
 print(pregunta_11())
 
 """

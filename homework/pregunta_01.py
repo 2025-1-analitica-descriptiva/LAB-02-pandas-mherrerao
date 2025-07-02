@@ -8,13 +8,9 @@
 import pandas as pd
 
 def pregunta_01():
-    df = pd.read_csv(
-        r'C:\Users\ASUS\Desktop\Analitica_Curso\Laboratorios\LAB-02-pandas-mherrerao\files\input\tbl0.tsv',
-        sep='\t',
-        thousands=None,
-        decimal='.'
-    )
-    return(len(df))
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+
+    return df.shape[0]
 
 print(pregunta_01())
 
