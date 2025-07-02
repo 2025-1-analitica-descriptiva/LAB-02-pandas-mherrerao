@@ -20,22 +20,22 @@ def pregunta_03():
     conteo.index.name = "c1"
     return conteo 
 
-if __name__ == '__main__':
-    print(pregunta_03())
 
-    """
-    ¿Cuál es la cantidad de registros por cada letra de la columna `c1` del
-    archivo `tbl0.tsv`?
+print(pregunta_03())
+
+    #"""
+    #¿Cuál es la cantidad de registros por cada letra de la columna `c1` del
+    #archivo `tbl0.tsv`?
 
     
 
-    Rta/
-    c1
-    A     8
-    B     7
-    C     5
-    D     6
-    E    14
-    Name: count, dtype: int64
+    #Rta/
+    #c1
+    #A     8
+    #B     7
+    #C     5
+    #D     6
+    #E    14
+    #Name: count, dtype: int64
 
-    """
+    #"""

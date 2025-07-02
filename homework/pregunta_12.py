@@ -23,10 +23,8 @@ def pregunta_12():
 
     return resultado
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_12())
-    """
+print(pregunta_12())
+"""
     Construya una tabla que contenga `c0` y una lista separada por ','
     de los valores de la columna `c5a`  y `c5b` (unidos por ':') de la
     tabla `tbl2.tsv`.

@@ -16,8 +16,7 @@ def pregunta_01():
     )
     return(len(df))
 
-if __name__ == '__main__':
-    print(pregunta_01())
+print(pregunta_01())
 
     #print(len('tbl0.tsv'))
 

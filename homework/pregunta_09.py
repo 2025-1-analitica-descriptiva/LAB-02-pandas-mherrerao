@@ -18,12 +18,10 @@ def pregunta_09():
 
     return df
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_09())
+print(pregunta_09())
 
 
-    """
+"""
     Agregue el año como una columna al dataframe que contiene el archivo
     `tbl0.tsv`.
 

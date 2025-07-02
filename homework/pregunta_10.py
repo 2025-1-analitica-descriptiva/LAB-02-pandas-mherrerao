@@ -21,11 +21,10 @@ def pregunta_10():
 
     return resultado
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_10())
 
-    """
+print(pregunta_10())
+
+"""
     Construya una tabla que contenga `c1` y una lista separada por ':' de los
     valores de la columna `c2` para el archivo `tbl0.tsv`.
 

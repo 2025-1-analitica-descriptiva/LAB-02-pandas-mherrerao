@@ -18,15 +18,14 @@ def pregunta_06():
 
     return lista_ordenada
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_06())
 
-    """
-    Retorne una lista con los valores unicos de la columna `c4` del archivo
-    `tbl1.csv` en mayusculas y ordenados alfabéticamente.
+print(pregunta_06())
 
-    Rta/
-    ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+    #"""
+    #Retorne una lista con los valores unicos de la columna `c4` del archivo
+    #`tbl1.csv` en mayusculas y ordenados alfabéticamente.
 
-    """
+    #Rta/
+    #['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
+    #"""

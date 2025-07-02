@@ -19,19 +19,19 @@ def pregunta_07():
 
     return ordenado
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_07())
-    """
-    Calcule la suma de la `c2` por cada letra de la `c1` del archivo
-    `tbl0.tsv`.
 
-    Rta/
-    c1
-    A    37
-    B    36
-    C    27
-    D    23
-    E    67
-    Name: c2, dtype: int64
-    """
+print(pregunta_07())
+    
+    #"""
+    #Calcule la suma de la `c2` por cada letra de la `c1` del archivo
+    #`tbl0.tsv`.
+
+    #Rta/
+    #c1
+    #A    37
+    #B    36
+    #C    27
+    #D    23
+    #E    67
+    #Name: c2, dtype: int64
+    #"""

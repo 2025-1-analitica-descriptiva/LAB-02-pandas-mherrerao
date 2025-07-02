@@ -30,11 +30,13 @@ def pregunta_13():
 
     return resultado
 
-if __name__ == '__main__':
-    print("Rta/")
-    print(pregunta_13())
-    """
-    Si la columna `c0` es la clave en los archivos `tbl0.tsv` y `tbl2.tsv`,
+
+print(pregunta_13())
+
+
+
+"""
+Si la columna `c0` es la clave en los archivos `tbl0.tsv` y `tbl2.tsv`,
     compute la suma de `tbl2.c5b` por cada valor en `tbl0.c1`.
 
     Rta/
